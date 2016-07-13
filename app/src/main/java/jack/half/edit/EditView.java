@@ -2,17 +2,12 @@ package jack.half.edit;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.graphics.Canvas;
 import android.os.Handler;
 import android.os.Message;
 import android.support.design.widget.Snackbar;
 import android.util.AttributeSet;
 import android.view.View;
-import android.widget.Button;
 import android.widget.RelativeLayout;
-
-import org.xutils.view.annotation.Event;
-import org.xutils.view.annotation.ViewInject;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -22,13 +17,13 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import jack.half.R;
+import jack.half.utils.BitmapUtils;
 
 /**
  * Created by zjchai on 16/7/10.
  */
 public class EditView extends RelativeLayout implements IEditView{
 
-    Button button ;
 
     Context context ;
 
@@ -52,21 +47,16 @@ public class EditView extends RelativeLayout implements IEditView{
 
     private void initViews() {
         inflate(context,R.layout.view_edit,this) ;
-        button = (Button) findViewById(R.id.btn_yes);
-        button.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                savePhoto(EditView.this) ;
-            }
-        });
+
     }
 
 
 
 
+
+
     public void savePhoto(View view) {
-        final Bitmap bmp = Bitmap.createBitmap(view.getWidth(), view.getHeight(), Bitmap.Config.ARGB_8888);
-        view.draw(new Canvas(bmp));
+        final Bitmap bmp = BitmapUtils.viewToBitmap(view) ;
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
         String time = dateFormat.format(new Date());
 

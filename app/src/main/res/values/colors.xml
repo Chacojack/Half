@@ -3,4 +3,31 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+
+    <color name="bg_white">#FFFFFF</color>
+    <color name="bg_black">#000000</color>
+
+    <color name="bg_grey_14">#111111</color>
+    <color name="bg_grey_13">#222222</color>
+    <color name="bg_grey_12">#333333</color>
+    <color name="bg_grey_11">#444444</color>
+    <color name="bg_grey_10">#555555</color>
+    <color name="bg_grey_9">#666666</color>
+    <color name="bg_grey_8">#777777</color>
+    <color name="bg_grey_7">#888888</color>
+    <color name="bg_grey_6">#999999</color>
+    <color name="bg_grey_5">#AAAAAA</color>
+    <color name="bg_grey_4">#BBBBBB</color>
+    <color name="bg_grey_3">#CCCCCC</color>
+    <color name="bg_grey_2">#DDDDDD</color>
+    <color name="bg_grey_1">#EEEEEE</color>
+
+    <color name="bg_green">#00FF00</color>
+    <color name="bg_red">#FF0000</color>
+    <color name="bg_blue">#0000FF</color>
+
+
+
+
 </resources>

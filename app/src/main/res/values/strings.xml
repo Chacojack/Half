@@ -8,4 +8,6 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="left_title">当我发状态说</string>
+    <string name="right_title">其实我是在说</string>
 </resources>
