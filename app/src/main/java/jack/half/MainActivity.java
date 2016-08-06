@@ -15,6 +15,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.avos.avoscloud.AVObject;
+
 import jack.half.edit.EditFragment;
 
 public class MainActivity extends AppCompatActivity
@@ -48,6 +50,10 @@ public class MainActivity extends AppCompatActivity
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
         Fragment f = new EditFragment() ;
         transaction.replace(R.id.fragment_container,f).commit();
+
+        AVObject testObject = new AVObject("TestObject");
+        testObject.put("foo", "bar");
+        testObject.saveInBackground();
 
     }
 
